@@ -13,8 +13,8 @@ describe('app.js', function() {
     });
   });
   describe('SlowEater', function() {
-    it('should return spaghetti if spaghetti is assigned to food', function() {
-      assert.equal(new app.SlowEater('scarfing', 'spaghetti').food, 'spaghetti');
+    it('should return spaghetti and burger if spaghetti and burger are assigned to food', function() {
+      assert.equal(new app.SlowEater('scarfing', ['spaghetti, burger']).food, 'spaghetti, burger');
     });
     it('should return boolean for the type of parameter stillEating', function() {
       assert.equal(typeof new app.SlowEater().stillEating, 'boolean');
